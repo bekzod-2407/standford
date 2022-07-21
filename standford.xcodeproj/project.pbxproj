@@ -60,7 +60,7 @@
 		CE3E69D22888299D009D4EFA /* standford */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E69E728883DC4009D4EFA /* supportingFiles */,
+				CE3E69E728883DC4009D4EFA /* SupportingFiles */,
 				CEFA0093288929AC00AE47E8 /* Model */,
 				CE3E69EA28883E56009D4EFA /* Views */,
 				CEFA00902889296C00AE47E8 /* Controllers */,
@@ -70,14 +70,14 @@
 			path = standford;
 			sourceTree = "<group>";
 		};
-		CE3E69E728883DC4009D4EFA /* supportingFiles */ = {
+		CE3E69E728883DC4009D4EFA /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				CE3E69DE2888299D009D4EFA /* LaunchScreen.storyboard */,
 				CE3E69DC2888299D009D4EFA /* Assets.xcassets */,
 				CE3E69D32888299D009D4EFA /* AppDelegate.swift */,
 			);
-			path = supportingFiles;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		CE3E69EA28883E56009D4EFA /* Views */ = {
