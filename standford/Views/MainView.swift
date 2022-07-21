@@ -8,16 +8,13 @@
 import UIKit
 
 class MainView: UIView {
-    var titles = ["🌏", "🧟‍♀️","😆","🦁","🤡"]
-    // just 4 button's with titles
+    
      lazy var buttonStack: UIStackView = {
         var view = UIStackView(arrangedSubviews: [
             createButton(withTitle:"", withTag: 0),
             createButton(withTitle:"", withTag: 1),
             createButton(withTitle:"", withTag: 2),
             createButton(withTitle:"", withTag: 3),
-//            createButton(withTitle:"", withTag: 4),
-//            createButton(withTitle:"", withTag: 5)
         ])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.distribution = .fillEqually
@@ -33,7 +30,7 @@ class MainView: UIView {
         view.textAlignment = .center
         return view
     }()
-    
+    // function to create buttons
     func createButton(withTitle title: String ,withTag tag: Int) -> UIButton {
         lazy var cardButton: UIButton = {
             let view = UIButton()
@@ -70,6 +67,7 @@ class MainView: UIView {
             flipCountLabel.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 20),
             flipCountLabel.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -20),
             flipCountLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -25),
+            // 67 line changed height of one button (stack is fill equally)
         ])
     }
 }
