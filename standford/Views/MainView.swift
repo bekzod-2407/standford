@@ -36,7 +36,8 @@ class MainView: UIView {
             let view = UIButton()
             view.translatesAutoresizingMaskIntoConstraints = false
             view.titleLabel?.font =  .monospacedSystemFont(ofSize: 40, weight: .bold)
-            view.backgroundColor = .orange
+            view.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+            view.titleLabel?.textColor = .black
             view.contentMode = .center
             view.setTitle(title, for: .normal)
             view.layer.borderWidth = 3
