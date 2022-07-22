@@ -103,7 +103,6 @@ class MainView: UIView {
             flipCountLabel.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 20),
             flipCountLabel.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -20),
             flipCountLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -25),
-            // 67 line changed height of one button (stack is fill equally)
         ])
     }
 }

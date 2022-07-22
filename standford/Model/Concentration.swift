@@ -15,8 +15,8 @@ class Concentration {
     func  chooseCard(at index: Int) {
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index { // one card face up
-               if cards[matchIndex].id == cards[index].id { //two cards faceup and match
-                    cards[matchIndex].isMatched = true
+               if cards[matchIndex].id == cards[index].id { //two cards cards faceup and match
+                    cards[matchIndex].isMatched = true //
                     cards[index].isMatched = true
                 }
                 cards[index].isFaceUp = true
@@ -30,10 +30,12 @@ class Concentration {
             }
         }
     }
-    init(numberOfPairsOfCards: Int) {
-        for _ in 1...numberOfPairsOfCards {
+    init(numberOfpairsOfCards: Int) {
+        for _ in 1...numberOfpairsOfCards {
             let card = Card()
-            cards += [card, card]  //in cycle create card and append in array
+            cards += [card , card]
+            
         }
+        
     }
 }

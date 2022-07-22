@@ -14,8 +14,8 @@ struct Card {
     static var  identifierFactory = 0
     
    static func getIdentifier() -> Int {
-        Card.identifierFactory += 1
-        return Card.identifierFactory
+       identifierFactory += 1
+        return identifierFactory
     }
     init() {
         self.id = Card.getIdentifier()
