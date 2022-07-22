@@ -21,6 +21,30 @@ class MainView: UIView {
         view.spacing = 10
         return view
     }()
+    lazy var secondButtonStack: UIStackView = {
+       var view = UIStackView(arrangedSubviews: [
+           createButton(withTitle:"", withTag: 4),
+           createButton(withTitle:"", withTag: 5),
+           createButton(withTitle:"", withTag: 6),
+           createButton(withTitle:"", withTag: 7),
+       ])
+       view.translatesAutoresizingMaskIntoConstraints = false
+       view.distribution = .fillEqually
+       view.spacing = 10
+       return view
+   }()
+    lazy var thirdButtonStack: UIStackView = {
+       var view = UIStackView(arrangedSubviews: [
+           createButton(withTitle:"", withTag: 8),
+           createButton(withTitle:"", withTag: 9),
+           createButton(withTitle:"", withTag: 10),
+           createButton(withTitle:"", withTag: 11),
+       ])
+       view.translatesAutoresizingMaskIntoConstraints = false
+       view.distribution = .fillEqually
+       view.spacing = 10
+       return view
+   }()
      lazy var flipCountLabel: UILabel = {
         var view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -59,12 +83,25 @@ class MainView: UIView {
     
     private func setupSubViews() {
         self.addSubview(buttonStack)
+        self.addSubview(secondButtonStack)
+        self.addSubview(thirdButtonStack)
         self.addSubview(flipCountLabel)
         NSLayoutConstraint.activate([
             buttonStack.topAnchor.constraint(equalTo: self.topAnchor,constant: 30),
             buttonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
             buttonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
             buttonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
+            
+            secondButtonStack.topAnchor.constraint(equalTo: buttonStack.bottomAnchor,constant: 10),
+            secondButtonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
+            secondButtonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
+            secondButtonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
+            
+            thirdButtonStack.topAnchor.constraint(equalTo: secondButtonStack.bottomAnchor,constant: 10),
+            thirdButtonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
+            thirdButtonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
+            thirdButtonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
+            
             flipCountLabel.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 20),
             flipCountLabel.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -20),
             flipCountLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor,constant: -25),

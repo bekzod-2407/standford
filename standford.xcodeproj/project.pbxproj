@@ -12,7 +12,6 @@
 		CE3E69DD2888299D009D4EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E69DC2888299D009D4EFA /* Assets.xcassets */; };
 		CE3E69E02888299D009D4EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E69DE2888299D009D4EFA /* LaunchScreen.storyboard */; };
 		CE3E69E928883E52009D4EFA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E69E828883E52009D4EFA /* MainView.swift */; };
-		CEFA008F2889166000AE47E8 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CEFA008E2889166000AE47E8 /* .gitignore */; };
 		CEFA0092288929A500AE47E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0091288929A500AE47E8 /* Card.swift */; };
 		CEFA009528892A1B00AE47E8 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA009428892A1B00AE47E8 /* Concentration.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 		CE3E69DF2888299D009D4EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3E69E12888299D009D4EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3E69E828883E52009D4EFA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CEFA008E2889166000AE47E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CEFA0091288929A500AE47E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CEFA009428892A1B00AE47E8 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +63,6 @@
 				CE3E69EA28883E56009D4EFA /* Views */,
 				CEFA00902889296C00AE47E8 /* Controllers */,
 				CE3E69E12888299D009D4EFA /* Info.plist */,
-				CEFA008E2889166000AE47E8 /* .gitignore */,
 			);
 			path = standford;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3E69E02888299D009D4EFA /* LaunchScreen.storyboard in Resources */,
-				CEFA008F2889166000AE47E8 /* .gitignore in Resources */,
 				CE3E69DD2888299D009D4EFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
