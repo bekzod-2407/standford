@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     private lazy var mainView: MainView = {
         var view = MainView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
@@ -30,7 +29,6 @@ class ViewController: UIViewController {
         
         setupSubViews()
     }
-    
     
     private func setupSubViews() {
         view.backgroundColor = .black
