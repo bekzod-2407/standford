@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     private var emojiChoces = ["🦁", "😎","👾", "👤" ,"🦷" ,"🧟‍♀️", "🐊", "🐳", "🦍", "☄️"]
     var emoji = [Int: String]()
     
-    lazy var game =  Concentration(numberOfpairsOfCards: (buttons.count+1) /  2)
+    lazy var game =  Concentration(numberOfpairsOfCards:  numberOfpairsOfCards)
+    
+    var numberOfpairsOfCards: Int  {
+        return (buttons.count+1) /  2
+    }
     var titles = ["🧟‍♀️", "🧟‍♀️","🤡","🦁","🤡","🦁"]
     var flipCount = 0 {
         didSet {

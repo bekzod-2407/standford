@@ -8,7 +8,18 @@
 import UIKit
 
 class MainView: UIView {
-    
+    lazy var mainStackView: UIStackView = {
+       var view = UIStackView(arrangedSubviews: [
+          buttonStack,
+          secondButtonStack,
+          thirdButtonStack,
+       ])
+       view.translatesAutoresizingMaskIntoConstraints = false
+       view.distribution = .fillEqually
+       view.spacing = 15
+       view.axis = .vertical
+       return view
+   }()
      lazy var buttonStack: UIStackView = {
         var view = UIStackView(arrangedSubviews: [
             createButton(withTitle:"", withTag: 0),
@@ -18,7 +29,8 @@ class MainView: UIView {
         ])
         view.translatesAutoresizingMaskIntoConstraints = false
         view.distribution = .fillEqually
-        view.spacing = 10
+        view.spacing = 15
+        view.axis = .horizontal
         return view
     }()
     lazy var secondButtonStack: UIStackView = {
@@ -30,7 +42,8 @@ class MainView: UIView {
        ])
        view.translatesAutoresizingMaskIntoConstraints = false
        view.distribution = .fillEqually
-       view.spacing = 10
+       view.spacing = 15
+        view.axis = .horizontal
        return view
    }()
     lazy var thirdButtonStack: UIStackView = {
@@ -42,7 +55,8 @@ class MainView: UIView {
        ])
        view.translatesAutoresizingMaskIntoConstraints = false
        view.distribution = .fillEqually
-       view.spacing = 10
+       view.spacing = 15
+       view.axis = .horizontal
        return view
    }()
      lazy var flipCountLabel: UILabel = {
@@ -80,25 +94,17 @@ class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     private func setupSubViews() {
-        self.addSubview(buttonStack)
-        self.addSubview(secondButtonStack)
-        self.addSubview(thirdButtonStack)
+        self.addSubview(mainStackView)
         self.addSubview(flipCountLabel)
+        let verticalSpace = NSLayoutConstraint(item: self.mainStackView, attribute: .bottom, relatedBy: .equal, toItem: self.flipCountLabel, attribute: .bottom, multiplier: 0.5, constant: 70)
+        
         NSLayoutConstraint.activate([
-            buttonStack.topAnchor.constraint(equalTo: self.topAnchor,constant: 30),
-            buttonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
-            buttonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
-            buttonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
+//            verticalSpace,
+            mainStackView.topAnchor.constraint(equalTo: self.topAnchor,constant: 50),
+            mainStackView.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 50),
+            mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
+            buttonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 100),
             
-            secondButtonStack.topAnchor.constraint(equalTo: buttonStack.bottomAnchor,constant: 10),
-            secondButtonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
-            secondButtonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
-            secondButtonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
-            
-            thirdButtonStack.topAnchor.constraint(equalTo: secondButtonStack.bottomAnchor,constant: 10),
-            thirdButtonStack.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 30),
-            thirdButtonStack.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
-            thirdButtonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 120),
             
             flipCountLabel.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 20),
             flipCountLabel.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -20),
