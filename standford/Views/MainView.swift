@@ -54,7 +54,6 @@ class MainView: UIView {
         view.textAlignment = .center
         return view
     }()
-    // function to create buttons
     func createButton(withTitle title: String ,withTag tag: Int) -> UIButton {
         lazy var cardButton: UIButton = {
             let view = UIButton()
@@ -80,7 +79,6 @@ class MainView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     private func setupSubViews() {
         self.addSubview(buttonStack)
         self.addSubview(secondButtonStack)

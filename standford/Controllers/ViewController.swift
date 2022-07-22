@@ -3,7 +3,6 @@
 //  standford
 //
 //  Created by Bekzod Qahhorov on 20/07/22.
-//
 
 import UIKit
 
@@ -26,8 +25,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupSubViews()
+    setupSubViews()
     }
     
     private func setupSubViews() {
@@ -41,7 +39,6 @@ class ViewController: UIViewController {
             mainView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
         ])
-        // append all ui buttons on array and create targets
         addTargetForAllButtons()
     }
     @objc private func buttonTapped(button: UIButton) {
@@ -81,6 +78,7 @@ class ViewController: UIViewController {
     
     func addTargetForAllButtons() {
         //TODO: -  YO MUST CHANGE THIS  (can't do dynamic)
+        // append all ui buttons on array and create targets
         mainView.buttonStack.arrangedSubviews.forEach { btn in
             guard let button = btn as? UIButton else {return}
             buttons.append(button)
@@ -97,6 +95,5 @@ class ViewController: UIViewController {
             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         }
     }
-    
 }
 
