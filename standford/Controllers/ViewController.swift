@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private var color = #colorLiteral(red: 0.9607841372, green: 0.9607844949, blue: 0.9693934321, alpha: 0)
     
     private var emojiChoces = ["🦁", "😎","👾", "👤" ,"🦷" ,"🧟‍♀️", "🐊", "🐳", "🦍", "☄️"]
-    var emoji = [Int: String]()
+    var emoji = [Card: String]()
     
     lazy var game =  Concentration(numberOfpairsOfCards:  numberOfpairsOfCards)
     
@@ -78,10 +78,10 @@ class ViewController: UIViewController {
     }
     
     private func addEmoji(for card: Card)-> String {
-        if emoji[card.id] == nil {
-            emoji[card.id] = emojiChoces.remove(at: emojiChoces.count.arc4randomExtension)
+        if emoji[card] == nil {
+            emoji[card] = emojiChoces.remove(at: emojiChoces.count.arc4randomExtension)
         }
-        return emoji[card.id] ?? "?"
+        return emoji[card] ?? "?"
     }
     
     func addTargetForAllButtons() {
