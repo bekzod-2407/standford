@@ -10,8 +10,8 @@ class ViewController: UIViewController {
     
     private var buttons = [UIButton]()
     private var color = #colorLiteral(red: 0.9607841372, green: 0.9607844949, blue: 0.9693934321, alpha: 0)
-    
-    private var emojiChoces = ["🦁", "😎","👾", "👤" ,"🦷" ,"🧟‍♀️", "🐊", "🐳", "🦍", "☄️"]
+
+    private var emojiChoces = "🦁😎👾👤🦷🧟‍♀️🐊🐳🦍☄️"
     var emoji = [Card: String]()
     
     lazy var game =  Concentration(numberOfpairsOfCards:  numberOfpairsOfCards)
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var titles = ["🧟‍♀️", "🧟‍♀️","🤡","🦁","🤡","🦁"]
     var flipCount = 0 {
         didSet {
-            mainView.flipCountLabel.text = "flips: \(flipCount)"
+            updateFlipCountLabel()
         }
     }
     private lazy var mainView: MainView = {
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             
         ])
         addTargetForAllButtons()
+        updateFlipCountLabel()
     }
     @objc private func buttonTapped(button: UIButton) {
         if button.backgroundColor !=  color {
@@ -76,10 +77,20 @@ class ViewController: UIViewController {
             
         }
     }
+    private func updateFlipCountLabel() {
+        let attributed: [NSAttributedString.Key: Any] = [
+            .strokeWidth: 5.0 ,
+            .strokeColor: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.1530002895, alpha: 1)
+            
+        ]
+        let attrebutedString = NSAttributedString(string: "flips: \(flipCount)", attributes: attributed)
+        mainView.flipCountLabel.attributedText = attrebutedString
+    }
     
     private func addEmoji(for card: Card)-> String {
         if emoji[card] == nil {
-            emoji[card] = emojiChoces.remove(at: emojiChoces.count.arc4randomExtension)
+            let randomStringIndex = emojiChoces.index(emojiChoces.startIndex, offsetBy: emojiChoces.count.arc4randomExtension)
+            emoji[card] = String(emojiChoces.remove(at:randomStringIndex ))
         }
         return emoji[card] ?? "?"
     }
