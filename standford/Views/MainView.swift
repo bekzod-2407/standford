@@ -99,11 +99,11 @@ class MainView: UIView {
         let verticalSpace = NSLayoutConstraint(item: self.mainStackView, attribute: .bottom, relatedBy: .equal, toItem: self.flipCountLabel, attribute: .bottom, multiplier: 0.5, constant: 70)
         
         NSLayoutConstraint.activate([
-//            verticalSpace,
+            verticalSpace,
             mainStackView.topAnchor.constraint(equalTo: self.topAnchor,constant: 50),
             mainStackView.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 50),
             mainStackView.rightAnchor.constraint(equalTo: self.rightAnchor,constant: -30),
-            buttonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 100),
+//            buttonStack.arrangedSubviews[0].heightAnchor.constraint(equalToConstant: 100),
             
             
             flipCountLabel.leftAnchor.constraint(equalTo: self.leftAnchor,constant: 20),
