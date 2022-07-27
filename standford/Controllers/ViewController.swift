@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     
     private var buttons = [UIButton]()
     private var color = #colorLiteral(red: 0.9607841372, green: 0.9607844949, blue: 0.9693934321, alpha: 0)
-
+    
     private var emojiChoces = "🦁😎👾👤🦷🧟‍♀️🐊🐳🦍☄️"
     var emoji = [Card: String]()
     
@@ -96,8 +96,7 @@ class ViewController: UIViewController {
     }
     
     func addTargetForAllButtons() {
-        //TODO: -  YO MUST CHANGE THIS  (can't do dynamic)
-        // append all ui buttons on array and create targets
+        //TODO: -  YO MUST CHANGE THIS  (can't do dynamic) i tried but it's not working line 115!
         mainView.buttonStack.arrangedSubviews.forEach { btn in
             guard let button = btn as? UIButton else {return}
             buttons.append(button)
@@ -113,6 +112,16 @@ class ViewController: UIViewController {
             buttons.append(button)
             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         }
+//        mainView.subviews.forEach{ item in
+//            if item is UIStackView {
+//                guard let stackView = item as? UIStackView else {return}
+//                stackView.arrangedSubviews.forEach { btn in
+//                    guard let button = btn as? UIButton else {return}
+//                    buttons.append(button)
+//                    button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+//                }
+//            }
+//        }
     }
 }
 
