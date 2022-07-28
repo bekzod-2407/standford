@@ -20,7 +20,7 @@ cscope.out
 t
 CMakeFiles
 .atom-build.json
-
+*.xcworkspace
 *.xcuserstate
 
 #============================================================================
