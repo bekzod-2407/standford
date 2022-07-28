@@ -13,7 +13,7 @@ CMakeFiles
 *.xcuserstate
 xcuserdata
 DerivedData
-*.standford.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
+standford.xcodeproj/**
 #============================================================================
 
 /benchmark/scripts/Benchmark_Driverc
