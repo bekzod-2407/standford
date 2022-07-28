@@ -96,32 +96,15 @@ class ViewController: UIViewController {
     }
     
     func addTargetForAllButtons() {
-        //TODO: -  YO MUST CHANGE THIS  (can't do dynamic) i tried but it's not working line 115!
-        mainView.buttonStack.arrangedSubviews.forEach { btn in
-            guard let button = btn as? UIButton else {return}
-            buttons.append(button)
-            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        mainView.mainStackView.arrangedSubviews.forEach{ item in
+            guard let stackViews = item as? UIStackView else {return}
+            stackViews.arrangedSubviews.forEach{ btn in
+                guard let button = btn as? UIButton else {return}
+                buttons.append(button)
+                button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+            }
+            
         }
-        mainView.secondButtonStack.arrangedSubviews.forEach { btn in
-            guard let button = btn as? UIButton else {return}
-            buttons.append(button)
-            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        }
-        mainView.thirdButtonStack.arrangedSubviews.forEach { btn in
-            guard let button = btn as? UIButton else {return}
-            buttons.append(button)
-            button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        }
-//        mainView.subviews.forEach{ item in
-//            if item is UIStackView {
-//                guard let stackView = item as? UIStackView else {return}
-//                stackView.arrangedSubviews.forEach { btn in
-//                    guard let button = btn as? UIButton else {return}
-//                    buttons.append(button)
-//                    button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//                }
-//            }
-//        }
     }
 }
 
