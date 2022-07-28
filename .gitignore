@@ -21,8 +21,9 @@ t
 CMakeFiles
 .atom-build.json
 
+*.xcuserstate
 
 #============================================================================
-*.xcuserstate
+
 /benchmark/scripts/Benchmark_Driverc
 
