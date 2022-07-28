@@ -1,15 +1,4 @@
 
-# Merge files created by git.
-*.orig
-# Byte compiled Python modules.
-*.pyc
-# vim swap files
-.*.sw[a-z]
-.sw?
-cscope.files
-cscope.out
-.vimrc
-
 .DS_Store
 # clangd
 .cache
@@ -22,7 +11,7 @@ CMakeFiles
 .atom-build.json
 *.xcworkspace
 *.xcuserstate
-
+*.standford.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
 #============================================================================
 
 /benchmark/scripts/Benchmark_Driverc
