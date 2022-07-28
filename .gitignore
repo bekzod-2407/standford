@@ -11,6 +11,8 @@ CMakeFiles
 .atom-build.json
 *.xcworkspace
 *.xcuserstate
+xcuserdata
+DerivedData
 *.standford.xcodeproj/project.xcworkspace/xcuserdata/user.xcuserdatad/UserInterfaceState.xcuserstate
 #============================================================================
 
