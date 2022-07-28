@@ -103,7 +103,6 @@ class ViewController: UIViewController {
                 buttons.append(button)
                 button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             }
-            
         }
     }
 }
