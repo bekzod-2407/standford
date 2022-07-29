@@ -12,6 +12,7 @@
 		CE3E69DD2888299D009D4EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E69DC2888299D009D4EFA /* Assets.xcassets */; };
 		CE3E69E02888299D009D4EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E69DE2888299D009D4EFA /* LaunchScreen.storyboard */; };
 		CE3E69E928883E52009D4EFA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E69E828883E52009D4EFA /* MainView.swift */; };
+		CECF918928938DEA0037F508 /* PlayingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECF918828938DEA0037F508 /* PlayingCards.swift */; };
 		CEFA0092288929A500AE47E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA0091288929A500AE47E8 /* Card.swift */; };
 		CEFA009528892A1B00AE47E8 /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFA009428892A1B00AE47E8 /* Concentration.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		CE3E69DF2888299D009D4EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3E69E12888299D009D4EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3E69E828883E52009D4EFA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CECF918828938DEA0037F508 /* PlayingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCards.swift; sourceTree = "<group>"; };
 		CEFA0091288929A500AE47E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CEFA009428892A1B00AE47E8 /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				CE3E69DE2888299D009D4EFA /* LaunchScreen.storyboard */,
 				CE3E69DC2888299D009D4EFA /* Assets.xcassets */,
 				CE3E69D32888299D009D4EFA /* AppDelegate.swift */,
+				CECF918828938DEA0037F508 /* PlayingCards.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				CE3E69D82888299D009D4EFA /* ViewController.swift in Sources */,
 				CEFA009528892A1B00AE47E8 /* Concentration.swift in Sources */,
+				CECF918928938DEA0037F508 /* PlayingCards.swift in Sources */,
 				CE3E69E928883E52009D4EFA /* MainView.swift in Sources */,
 				CE3E69D42888299D009D4EFA /* AppDelegate.swift in Sources */,
 				CEFA0092288929A500AE47E8 /* Card.swift in Sources */,
