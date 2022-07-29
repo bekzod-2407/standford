@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubViews()
+        prints() 
     }
     
     private func setupSubViews() {
@@ -102,6 +103,15 @@ class ViewController: UIViewController {
                 guard let button = btn as? UIButton else {return}
                 buttons.append(button)
                 button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+            }
+        }
+    }
+    
+    private func prints() {
+        var deck = PlayingCardsDeck()
+        for _ in 1...9 {
+            if let card = deck.draw() {
+                print("\(card)")
             }
         }
     }
